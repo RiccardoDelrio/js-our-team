@@ -53,22 +53,21 @@ for (let i = 0; i < teamMembers.length; i++) {
 }
 function addMarkup(img, name, role, email) {
   rowEl.innerHTML += `
-    <div class="col-4 ">
-      <div class="card mb-3">
-        <div class="row g-0  ">
-          <div class="col-md-4 my-card">
-            <img src="${img}" class="img-fluid rounded-start" alt="" >
-          </div>
-          <div class="col-8 bg-black text-white text-start description">
-            <div class="card-body">
-              <h5 class="card-title">${name}</h5>
-              <p class="card-text">${role}</p>
-              <p class="card-text text-primary">${email}</p>
+<div class="col-12 col-md-6 col-lg-4 p-3 ">
+                <div class="card mb-3">
+                    <div class="row bg-black">
+                        <div class="col-4 p-0">
+                            <img src="${img}" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h5 class="card-title">${name}</h5>
+                            <p class="card-text">${role}</p>
+                            <p class="card-text text-primary">${email}</p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
   `
 
 }
