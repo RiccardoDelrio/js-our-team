@@ -36,3 +36,34 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+const rowEl = document.querySelector(".card-container")
+
+for (let i = 0; i < teamMembers.length; i++) {
+  const name = teamMembers[i].name
+  const role = teamMembers[i].role
+  const email = teamMembers[i].email
+  const img = teamMembers[i].img
+  addMarkup(img, name, role, email)
+
+}
+function addMarkup(img, name, role, email) {
+  rowEl.innerHTML += `
+    <div class="col-4">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${img}" class="img-fluid rounded-start" alt="">
+          </div>
+          <div class="col-md-8 bg-black text-white">
+            <div class="card-body">
+              <h5 class="card-title">${name}</h5>
+              <p class="card-text">${role}</p>
+              <p class="card-text">${email}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+
+}
