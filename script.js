@@ -37,9 +37,14 @@ const teamMembers = [
   }
 ];
 const rowEl = document.querySelector(".card-container")
+const nameEl = document.querySelector(".inputName")
+const jobEl = document.querySelector(".inputJob")
+const emailEl = document.querySelector(".inputEmail")
+const imgEl = document.querySelector(".imgName")
+const formEl = document.querySelector(".form")
 
 for (let i = 0; i < teamMembers.length; i++) {
-  const name = teamMembers[i].name
+  const name = teamMembers[i].name.toUpperCase()
   const role = teamMembers[i].role
   const email = teamMembers[i].email
   const img = teamMembers[i].img
@@ -67,3 +72,4 @@ function addMarkup(img, name, role, email) {
   `
 
 }
+formEl
