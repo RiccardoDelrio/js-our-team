@@ -42,6 +42,7 @@ const jobEl = document.getElementById("inputJob")
 const emailEl = document.getElementById("inputEmail")
 const imgEl = document.getElementById("img")
 const formEl = document.querySelector(".form")
+const btnEl = document.querySelector(".btn")
 
 for (let i = 0; i < teamMembers.length; i++) {
   const name = teamMembers[i].name.toUpperCase()
@@ -49,7 +50,6 @@ for (let i = 0; i < teamMembers.length; i++) {
   const email = teamMembers[i].email
   const img = teamMembers[i].img
   addMarkup(img, name, role, email)
-
 }
 function addMarkup(img, name, role, email) {
   rowEl.innerHTML += `
@@ -86,4 +86,9 @@ formEl.addEventListener("submit", (e) => {
   teamMembers.push(newMembers)
   addMarkup(img, name, role, email);
   formEl.reset()
+  formEl.classList.add("d-none")
+
+})
+btnEl.addEventListener("click", () => {
+  formEl.classList.remove("d-none")
 })
